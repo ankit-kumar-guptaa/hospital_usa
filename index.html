@@ -46,35 +46,40 @@
 
 
 
-   <!-- Forms Section -->
+<!-- Forms Section -->
 <section id="forms" class="forms" data-aos="fade-up">
     <div class="container">
         <h2>Join the Future of Healthcare</h2>
         <div class="form-grid">
             <div class="form-box">
                 <h3>Jobseekers</h3>
-                <form id="jobseeker-form" method="POST" action="#">
-                    <input type="text" name="fullName" placeholder="Full Name" required>
+                <form id="jobseeker-form">
+                    <input type="text" name="name" placeholder="Full Name" required>
                     <input type="email" name="email" placeholder="Email" required>
                     <input type="tel" name="phone" placeholder="Phone" required>
-                    <input type="text" name="desiredRole" placeholder="Desired Role" required>
-                    <button type="submit" class="form-btn">Apply Now</button>
+                    <input type="text" name="role" placeholder="Desired Role" required>
+                    <button type="submit" class="form-btn">
+                        Apply Now
+                        <span class="loader-dots"></span> <!-- Empty span, dots via CSS -->
+                    </button>
                 </form>
             </div>
             <div class="form-box">
                 <h3>Employers</h3>
-                <form id="employer-form" method="POST" action="#">
-                    <input type="text" name="companyName" placeholder="Company Name" required>
+                <form id="employer-form">
+                    <input type="text" name="company" placeholder="Company Name" required>
                     <input type="email" name="email" placeholder="Email" required>
                     <input type="tel" name="phone" placeholder="Phone" required>
-                    <input type="text" name="roleNeeded" placeholder="Role Needed" required>
-                    <button type="submit" class="form-btn">Hire Now</button>
+                    <input type="text" name="role" placeholder="Role Needed" required>
+                    <button type="submit" class="form-btn">
+                        Hire Now
+                        <span class="loader-dots"></span> <!-- Empty span, dots via CSS -->
+                    </button>
                 </form>
             </div>
         </div>
     </div>
 </section>
-
 
     <!-- Services Section with Image -->
     <section id="services" class="services" data-aos="fade-up">
@@ -209,7 +214,7 @@
             </div>
             <div class="footer-contact">
                 <h3>Get in Touch</h3>
-                <form id="contact-form" class="contact-form" method="POST" action="#">
+                <form id="contact-form" class="contact-form">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Your Name" required class="form-input">
                     </div>
@@ -219,7 +224,10 @@
                     <div class="form-group">
                         <textarea name="message" placeholder="Your Message" required class="form-textarea"></textarea>
                     </div>
-                    <button type="submit" class="form-btn">Send Message</button>
+                    <button type="submit" class="form-btn">
+                        Send Message
+                        <span class="loader-dots"></span> <!-- Empty span, dots via CSS -->
+                    </button>
                 </form>
             </div>
         </div>
@@ -228,5 +236,6 @@
 </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/forms.js"></script>
 </body>
 </html>
