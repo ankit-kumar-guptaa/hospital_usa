@@ -1,240 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HospitalPlacement.com: Premier healthcare staffing solutions in the USA. Hire top medical talent or find your dream job today!">
-    <meta name="keywords" content="healthcare staffing USA, medical recruitment, hospital jobs, nursing jobs, healthcare careers">
+    <meta name="description" content="HospitalPlacement.com: 日本における最高の医療人材ソリューション。トップ医療人材を採用するか、夢の仕事を見つけましょう！">
+    <meta name="keywords" content="日本医療人材紹介, 医療採用, 病院求人, 看護師求人, 医療キャリア">
     <meta name="author" content="HospitalPlacement.com">
-    <title>HospitalPlacement.com | Premier Healthcare Staffing in the USA</title>
+    <title>HospitalPlacement.com | 日本における最高の医療人材紹介</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Notification Container -->
-<div id="notification" class="notification"></div>
-    <!-- Sticky Header -->
+    <!-- 通知コンテナ -->
+    <div id="notification" class="notification"></div>
+    <!-- 固定ヘッダー -->
     <header class="header" data-aos="fade-down">
         <div class="container">
             <div class="header-content">
-                <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" alt="HospitalPlacement Logo" class="logo">
+                <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" alt="HospitalPlacementロゴ" class="logo">
                 <nav class="nav">
-                    <a href="#forms">Join Us</a>
-                    <a href="#services">Services</a>
-                    <a href="#solutions">Solutions</a>
-
-                    <a href="#why-us">Why Us</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#forms">参加する</a>
+                    <a href="#services">サービス</a>
+                    <a href="#solutions">ソリューション</a>
+                    <a href="#why-us">私たちの強み</a>
+                    <a href="#contact">お問い合わせ</a>
                 </nav>
                 <div class="menu-toggle">☰</div>
             </div>
         </div>
     </header>
 
-   <!-- Hero Section with Background Image -->
-<section class="hero" data-aos="zoom-in">
-    <div class="container">
-        <h1>Empowering Healthcare in <img src="https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg" width="100px" alt=""></h1>
-        <p>Connecting top medical talent with leading hospitals</p>
-        <a href="#forms" class="cta-btn">Start Now</a><br>
-        <div class="hero-alert" data-aos="fade-up" data-aos-delay="300">
-            <span>🎉 No Joining, No Fees!</span> Pay only when we successfully place the right candidate.
-        </div>
-    </div>
-</section>
-
-
-
-
-<!-- Forms Section -->
-<section id="forms" class="forms" data-aos="fade-up">
-    <div class="container">
-        <h2>Join the Future of Healthcare</h2>
-        <div class="form-grid">
-            <div class="form-box">
-                <h3>Jobseekers</h3>
-                <form id="jobseeker-form">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone" required>
-                    <input type="text" name="role" placeholder="Desired Role" required>
-                    <button type="submit" class="form-btn">
-                        Apply Now
-                        <span class="loader-dots"></span> <!-- Empty span, dots via CSS -->
-                    </button>
-                </form>
-            </div>
-            <div class="form-box">
-                <h3>Employers</h3>
-                <form id="employer-form">
-                    <input type="text" name="company" placeholder="Company Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone" required>
-                    <input type="text" name="role" placeholder="Role Needed" required>
-                    <button type="submit" class="form-btn">
-                        Hire Now
-                        <span class="loader-dots"></span> <!-- Empty span, dots via CSS -->
-                    </button>
-                </form>
+    <!-- ヒーローセクション（背景画像付き） -->
+    <section class="hero" data-aos="zoom-in">
+        <div class="container">
+            <h1>日本の医療を強化 <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg" width="100px" alt="日本の国旗"></h1>
+            <p>トップ医療人材を一流病院と結びつける</p>
+            <a href="#forms" class="cta-btn">今すぐ始める</a><br>
+            <div class="hero-alert" data-aos="fade-up" data-aos-delay="300">
+                <span>🎉 入会費・手数料無料！</span> 適切な人材を配置したときにのみお支払い。
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    <!-- Services Section with Image -->
+    <!-- フォームセクション -->
+    <section id="forms" class="forms" data-aos="fade-up">
+        <div class="container">
+            <h2>医療の未来に参加する</h2>
+            <div class="form-grid">
+                <div class="form-box">
+                    <h3>求職者向け</h3>
+                    <form id="jobseeker-form">
+                        <input type="text" name="name" placeholder="氏名" required>
+                        <input type="email" name="email" placeholder="メールアドレス" required>
+                        <input type="tel" name="phone" placeholder="電話番号" required>
+                        <input type="text" name="role" placeholder="希望職種" required>
+                        <button type="submit" class="form-btn">
+                            今すぐ応募
+                            <span class="loader-dots"></span>
+                        </button>
+                    </form>
+                </div>
+                <div class="form-box">
+                    <h3>雇用主向け</h3>
+                    <form id="employer-form">
+                        <input type="text" name="company" placeholder="会社名" required>
+                        <input type="email" name="email" placeholder="メールアドレス" required>
+                        <input type="tel" name="phone" placeholder="電話番号" required>
+                        <input type="text" name="role" placeholder="募集職種" required>
+                        <button type="submit" class="form-btn">
+                            今すぐ採用
+                            <span class="loader-dots"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- サービスセクション（画像付き） -->
     <section id="services" class="services" data-aos="fade-up">
         <div class="container">
-            <h2>Our Staffing Solutions</h2>
-            <p>Creative and efficient recruitment for the USA healthcare industry.</p>
+            <h2>私たちの人材ソリューション</h2>
+            <p>日本の医療業界向けの創造的かつ効率的な採用サービス。</p>
             <div class="services-content">
-                <img src="https://media.istockphoto.com/id/1147975563/photo/portrait-of-medical-team-standing-in-hospital-corridor.jpg?s=612x612&w=0&k=20&c=6MhVX0L1cVMUsjvYLuqw0tRwyLvdnrhRvHelunW3nRY=" alt="Healthcare Team" class="service-img">
+                <img src="https://media.istockphoto.com/id/1147975563/photo/portrait-of-medical-team-standing-in-hospital-corridor.jpg?s=612x612&w=0&k=20&c=6MhVX0L1cVMUsjvYLuqw0tRwyLvdnrhRvHelunW3nRY=" alt="医療チーム" class="service-img">
                 <div class="service-grid">
-                    <div class="service-item">Full Recruitment Outsourcing</div>
-                    <div class="service-item">Success-Based Fee Model</div>
-                    <div class="service-item">Rapid Hiring Process</div>
-                    <div class="service-item">Precision Pre-Screening</div>
-                    <div class="service-item">Extensive Talent Database</div>
-                    <div class="service-item">Elite Headhunting</div>
+                    <div class="service-item">完全採用アウトソーシング</div>
+                    <div class="service-item">成功報酬型料金モデル</div>
+                    <div class="service-item">迅速な採用プロセス</div>
+                    <div class="service-item">精密な事前スクリーニング</div>
+                    <div class="service-item">豊富な人材データベース</div>
+                    <div class="service-item">エリートヘッドハンティング</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Us Section -->
+    <!-- 私たちの強みセクション -->
     <section id="why-us" class="why-us" data-aos="fade-up">
         <div class="container">
-            <h2>Why HospitalPlacement.com?</h2>
+            <h2>HospitalPlacement.comの強み</h2>
             <div class="why-us-grid">
                 <div class="why-us-item">
-                    <h3>Industry Expertise</h3>
-                    <p>Specialized knowledge in healthcare staffing.</p>
+                    <h3>業界専門知識</h3>
+                    <p>医療人材紹介における専門知識。</p>
                 </div>
                 <div class="why-us-item">
-                    <h3>Vast Network</h3>
-                    <p>Access to top-tier medical professionals nationwide.</p>
+                    <h3>広範なネットワーク</h3>
+                    <p>全国のトップ医療専門家へのアクセス。</p>
                 </div>
                 <div class="why-us-item">
-                    <h3>Custom Solutions</h3>
-                    <p>Tailored strategies for perfect candidate matches.</p>
+                    <h3>カスタムソリューション</h3>
+                    <p>最適な人材マッチングのためのカスタマイズ戦略。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Solutions Section -->
-<section id="solutions" class="solutions" data-aos="fade-up">
-    <div class="container">
-        <h2>Our Solutions</h2>
-        <p>Comprehensive staffing solutions tailored for the USA healthcare industry.</p>
-        <div class="solutions-grid">
-            <div class="solution-item">
-                <div class="solution-icon">📋</div>
-                <h3>Complete Recruitment Process Outsourcing</h3>
-                <p>We manage the entire recruitment process, allowing you to focus on your core business while we find the best talent for you.</p>
-            </div>
-            <div class="solution-item">
-                <div class="solution-icon">💰</div>
-                <h3>Pay on Success Fee Model</h3>
-                <p>Our pay-on-success model ensures you only pay for results, providing a cost-effective solution for your recruitment needs.</p>
-            </div>
-            <div class="solution-item">
-                <div class="solution-icon">⏩</div>
-                <h3>Faster Turnaround Times</h3>
-                <p>We deliver quick and efficient recruitment solutions, minimizing downtime and ensuring your team is always at full strength.</p>
-            </div>
-            <div class="solution-item">
-                <div class="solution-icon">💡</div>
-                <h3>Best Fit Pre-Screening Facility with Multilevel Screening</h3>
-                <p>Our multilevel screening ensures candidates are the best fit for your organization, enhancing team performance and cohesion.</p>
-            </div>
-            <div class="solution-item">
-                <div class="solution-icon">📊</div>
-                <h3>Wide Industry Skill Database for Perfect Match</h3>
-                <p>Access our extensive database to find candidates with the precise skills and experience needed for your industry.</p>
-            </div>
-            <div class="solution-item">
-                <div class="solution-icon">🚀</div>
-                <h3>Head Hunting with Expert Connection</h3>
-                <p>Our headhunting services leverage industry connections to find top-tier talent that aligns with your strategic goals.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-   <!-- Testimonials Section -->
-<!-- <section class="testimonials" data-aos="fade-up">
-    <div class="container">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonial-slider">
-            <div class="testimonial-wrapper">
-                <div class="testimonial-item">
-                    <p>"HospitalPlacement.com revolutionized our staffing. Fast and flawless service!"</p>
-                    <h4>Dr. Michael Lee</h4>
-                    <span>Director, Apex Hospitals</span>
+    <!-- ソリューションセクション -->
+    <section id="solutions" class="solutions" data-aos="fade-up">
+        <div class="container">
+            <h2>私たちのソリューション</h2>
+            <p>日本の医療業界向けにカスタマイズされた包括的な人材ソリューション。</p>
+            <div class="solutions-grid">
+                <div class="solution-item">
+                    <div class="solution-icon">📋</div>
+                    <h3>完全採用プロセスアウトソーシング</h3>
+                    <p>採用プロセス全体を管理し、貴社のコア業務に集中できるように最適な人材を見つけます。</p>
                 </div>
-                <div class="testimonial-item">
-                    <p>"The best talent pool with quick turnaround. Truly impressive!"</p>
-                    <h4>Sarah Johnson</h4>
-                    <span>HR Manager, Unity Clinics</span>
+                <div class="solution-item">
+                    <div class="solution-icon">💰</div>
+                    <h3>成功報酬型料金モデル</h3>
+                    <p>成果に応じた支払いモデルで、コスト効率の高い採用ソリューションを提供します。</p>
                 </div>
-                <div class="testimonial-item">
-                    <p>"Unmatched dedication to finding the perfect fit. A lifesaver!"</p>
-                    <h4>Dr. Emily Carter</h4>
-                    <span>CEO, HealthFirst</span>
+                <div class="solution-item">
+                    <div class="solution-icon">⏩</div>
+                    <h3>迅速な対応時間</h3>
+                    <p>迅速かつ効率的な採用ソリューションで、ダウンタイムを最小限に抑え、チームを常にフル稼働させます。</p>
                 </div>
-                <div class="testimonial-item">
-                    <p>"Top professionals delivered seamlessly. Saved us time and effort!"</p>
-                    <h4>James Patel</h4>
-                    <span>Operations Head, MediCore</span>
+                <div class="solution-item">
+                    <div class="solution-icon">💡</div>
+                    <h3>多段階スクリーニングによる最適マッチング</h3>
+                    <p>多段階スクリーニングで、貴社に最適な人材を確保し、チームのパフォーマンスを向上させます。</p>
                 </div>
-                <div class="testimonial-item">
-                    <p>"Their expertise is a game-changer for healthcare staffing!"</p>
-                    <h4>Dr. Lisa Adams</h4>
-                    <span>Chief Surgeon, LifeLine Hospitals</span>
+                <div class="solution-item">
+                    <div class="solution-icon">📊</div>
+                    <h3>業界スキルデータベースによる完璧なマッチング</h3>
+                    <p>豊富なデータベースを活用し、貴社の業界に必要なスキルと経験を持つ人材を見つけます。</p>
+                </div>
+                <div class="solution-item">
+                    <div class="solution-icon">🚀</div>
+                    <h3>専門家ネットワークによるヘッドハンティング</h3>
+                    <p>業界のつながりを活用したヘッドハンティングで、戦略的目標に合ったトップ人材を見つけます。</p>
                 </div>
             </div>
         </div>
-       
-    </div>
-</section> -->
+    </section>
 
-    
-  
-    
-   
-
-  <!-- Footer with Contact Form -->
-<footer id="contact" class="footer" data-aos="fade-up">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-about">
-                <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" alt="HospitalPlacement Logo" class="logo">
-                <p>At HospitalPlacement.com, we are committed to bridging the gap between exceptional healthcare talent and leading medical facilities. Since 2010, we’ve been a trusted partner , healthcare industry, delivering innovative staffing solutions that empower hospitals, clinics, and nursing homes to thrive. Whether you’re a healthcare employer seeking top-tier professionals or a jobseeker aiming to advance your career, we connect the right people with the right opportunities every time.</p>
+    <!-- フッター（お問い合わせフォーム付き） -->
+    <footer id="contact" class="footer" data-aos="fade-up">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" alt="HospitalPlacementロゴ" class="logo">
+                    <p>HospitalPlacement.comでは、優れた医療人材と一流医療施設をつなぐことに尽力しています。2010年以来、私たちは信頼できるパートナーとして、日本の医療業界に革新的な人材ソリューションを提供し、病院、クリニック、介護施設が成長できるよう支援してきました。医療雇用主としてトップ人材を求める場合も、キャリアを進めたい求職者としての場合も、常に適切な人材と機会をつなぎます。</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>お問い合わせ</h3>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="お名前" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="メールアドレス" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="メッセージ" required class="form-textarea"></textarea>
+                        </div>
+                        <button type="submit" class="form-btn">
+                            メッセージを送信
+                            <span class="loader-dots"></span>
+                        </button>
+                    </form>
+                </div>
             </div>
-            <div class="footer-contact">
-                <h3>Get in Touch</h3>
-                <form id="contact-form" class="contact-form">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required class="form-input">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required class="form-input">
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" required class="form-textarea"></textarea>
-                    </div>
-                    <button type="submit" class="form-btn">
-                        Send Message
-                        <span class="loader-dots"></span> <!-- Empty span, dots via CSS -->
-                    </button>
-                </form>
-            </div>
+            <p class="footer-bottom">© 2025 HospitalPlacement.com | <a href="mailto:info@hospitalplacement.com">info@hospitalplacement.com</a></p>
         </div>
-        <p class="footer-bottom">© 2025 HospitalPlacement.com | <a href="mailto:info@hospitalplacement.com">info@hospitalplacement.com</a></p>
-    </div>
-</footer>
+    </footer>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
     <script src="js/forms.js"></script>
+    <script src="http://localhost/recruitment-chatbot/script/chatbot.js"></script>
 </body>
 </html>
