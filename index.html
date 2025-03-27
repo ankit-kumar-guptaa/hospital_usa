@@ -9,10 +9,55 @@
     <title>HospitalPlacement.com | Premier Healthcare Staffing in the USA</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome CDN for WhatsApp Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Fixed WhatsApp Icon Styling */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000; /* Ensures it stays above other content */
+            background: #25D366; /* WhatsApp green */
+            width: 60px;
+            height: 60px;
+            border-radius: 50%; /* Circular shape */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            transition: transform 0.3s ease, background 0.3s ease; /* Smooth hover effects */
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1); /* Slight zoom on hover */
+            background: #128C7E; /* Darker green on hover */
+        }
+
+        .whatsapp-float i {
+            color: #fff; /* White icon */
+            font-size: 30px; /* Larger icon */
+        }
+
+        .whatsapp-float span {
+            display: none; /* Hide number by default */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+            }
+            .whatsapp-float i {
+                font-size: 24px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Notification Container -->
-<div id="notification" class="notification"></div>
+    <div id="notification" class="notification"></div>
     <!-- Sticky Header -->
     <header class="header" data-aos="fade-down">
         <div class="container">
@@ -22,7 +67,6 @@
                     <a href="#forms">Join Us</a>
                     <a href="#services">Services</a>
                     <a href="#solutions">Solutions</a>
-
                     <a href="#why-us">Why Us</a>
                     <a href="#contact">Contact</a>
                 </nav>
@@ -31,55 +75,52 @@
         </div>
     </header>
 
-   <!-- Hero Section with Background Image -->
-<section class="hero" data-aos="zoom-in">
-    <div class="container">
-        <h1>Empowering Healthcare in <img src="https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg" width="100px" alt=""></h1>
-        <p>Connecting top medical talent with leading hospitals</p>
-        <a href="#forms" class="cta-btn">Start Now</a><br>
-        <div class="hero-alert" data-aos="fade-up" data-aos-delay="300">
-            <span>🎉 No Joining, No Fees!</span> Pay only when we successfully place the right candidate.
-        </div>
-    </div>
-</section>
-
-
-
-
-<!-- Forms Section -->
-<section id="forms" class="forms" data-aos="fade-up">
-    <div class="container">
-        <h2>Join the Future of Healthcare</h2>
-        <div class="form-grid">
-            <div class="form-box">
-                <h3>Jobseekers</h3>
-                <form id="jobseeker-form">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone" required>
-                    <input type="text" name="role" placeholder="Desired Role" required>
-                    <button type="submit" class="form-btn">
-                        Apply Now
-                        <span class="loader-dots"></span> <!-- Empty span, dots via CSS -->
-                    </button>
-                </form>
-            </div>
-            <div class="form-box">
-                <h3>Employers</h3>
-                <form id="employer-form">
-                    <input type="text" name="company" placeholder="Company Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone" required>
-                    <input type="text" name="role" placeholder="Role Needed" required>
-                    <button type="submit" class="form-btn">
-                        Hire Now
-                        <span class="loader-dots"></span> <!-- Empty span, dots via CSS -->
-                    </button>
-                </form>
+    <!-- Hero Section with Background Image -->
+    <section class="hero" data-aos="zoom-in">
+        <div class="container">
+            <h1>Empowering Healthcare in <img src="https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg" width="100px" alt=""></h1>
+            <p>Connecting top medical talent with leading hospitals</p>
+            <a href="#forms" class="cta-btn">Start Now</a><br>
+            <div class="hero-alert" data-aos="fade-up" data-aos-delay="300">
+                <span>🎉 No Joining, No Fees!</span> Pay only when we successfully place the right candidate.
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- Forms Section -->
+    <section id="forms" class="forms" data-aos="fade-up">
+        <div class="container">
+            <h2>Join the Future of Healthcare</h2>
+            <div class="form-grid">
+                <div class="form-box">
+                    <h3>Jobseekers</h3>
+                    <form id="jobseeker-form">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="tel" name="phone" placeholder="Phone" required>
+                        <input type="text" name="role" placeholder="Desired Role" required>
+                        <button type="submit" class="form-btn">
+                            Apply Now
+                            <span class="loader-dots"></span>
+                        </button>
+                    </form>
+                </div>
+                <div class="form-box">
+                    <h3>Employers</h3>
+                    <form id="employer-form">
+                        <input type="text" name="company" placeholder="Company Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="tel" name="phone" placeholder="Phone" required>
+                        <input type="text" name="role" placeholder="Role Needed" required>
+                        <button type="submit" class="form-btn">
+                            Hire Now
+                            <span class="loader-dots"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Services Section with Image -->
     <section id="services" class="services" data-aos="fade-up">
@@ -122,117 +163,83 @@
     </section>
 
     <!-- Our Solutions Section -->
-<section id="solutions" class="solutions" data-aos="fade-up">
-    <div class="container">
-        <h2>Our Solutions</h2>
-        <p>Comprehensive staffing solutions tailored for the USA healthcare industry.</p>
-        <div class="solutions-grid">
-            <div class="solution-item">
-                <div class="solution-icon">📋</div>
-                <h3>Complete Recruitment Process Outsourcing</h3>
-                <p>We manage the entire recruitment process, allowing you to focus on your core business while we find the best talent for you.</p>
-            </div>
-            <div class="solution-item">
-                <div class="solution-icon">💰</div>
-                <h3>Pay on Success Fee Model</h3>
-                <p>Our pay-on-success model ensures you only pay for results, providing a cost-effective solution for your recruitment needs.</p>
-            </div>
-            <div class="solution-item">
-                <div class="solution-icon">⏩</div>
-                <h3>Faster Turnaround Times</h3>
-                <p>We deliver quick and efficient recruitment solutions, minimizing downtime and ensuring your team is always at full strength.</p>
-            </div>
-            <div class="solution-item">
-                <div class="solution-icon">💡</div>
-                <h3>Best Fit Pre-Screening Facility with Multilevel Screening</h3>
-                <p>Our multilevel screening ensures candidates are the best fit for your organization, enhancing team performance and cohesion.</p>
-            </div>
-            <div class="solution-item">
-                <div class="solution-icon">📊</div>
-                <h3>Wide Industry Skill Database for Perfect Match</h3>
-                <p>Access our extensive database to find candidates with the precise skills and experience needed for your industry.</p>
-            </div>
-            <div class="solution-item">
-                <div class="solution-icon">🚀</div>
-                <h3>Head Hunting with Expert Connection</h3>
-                <p>Our headhunting services leverage industry connections to find top-tier talent that aligns with your strategic goals.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-   <!-- Testimonials Section -->
-<!-- <section class="testimonials" data-aos="fade-up">
-    <div class="container">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonial-slider">
-            <div class="testimonial-wrapper">
-                <div class="testimonial-item">
-                    <p>"HospitalPlacement.com revolutionized our staffing. Fast and flawless service!"</p>
-                    <h4>Dr. Michael Lee</h4>
-                    <span>Director, Apex Hospitals</span>
+    <section id="solutions" class="solutions" data-aos="fade-up">
+        <div class="container">
+            <h2>Our Solutions</h2>
+            <p>Comprehensive staffing solutions tailored for the USA healthcare industry.</p>
+            <div class="solutions-grid">
+                <div class="solution-item">
+                    <div class="solution-icon">📋</div>
+                    <h3>Complete Recruitment Process Outsourcing</h3>
+                    <p>We manage the entire recruitment process, allowing you to focus on your core business while we find the best talent for you.</p>
                 </div>
-                <div class="testimonial-item">
-                    <p>"The best talent pool with quick turnaround. Truly impressive!"</p>
-                    <h4>Sarah Johnson</h4>
-                    <span>HR Manager, Unity Clinics</span>
+                <div class="solution-item">
+                    <div class="solution-icon">💰</div>
+                    <h3>Pay on Success Fee Model</h3>
+                    <p>Our pay-on-success model ensures you only pay for results, providing a cost-effective solution for your recruitment needs.</p>
                 </div>
-                <div class="testimonial-item">
-                    <p>"Unmatched dedication to finding the perfect fit. A lifesaver!"</p>
-                    <h4>Dr. Emily Carter</h4>
-                    <span>CEO, HealthFirst</span>
+                <div class="solution-item">
+                    <div class="solution-icon">⏩</div>
+                    <h3>Faster Turnaround Times</h3>
+                    <p>We deliver quick and efficient recruitment solutions, minimizing downtime and ensuring your team is always at full strength.</p>
                 </div>
-                <div class="testimonial-item">
-                    <p>"Top professionals delivered seamlessly. Saved us time and effort!"</p>
-                    <h4>James Patel</h4>
-                    <span>Operations Head, MediCore</span>
+                <div class="solution-item">
+                    <div class="solution-icon">💡</div>
+                    <h3>Best Fit Pre-Screening Facility with Multilevel Screening</h3>
+                    <p>Our multilevel screening ensures candidates are the best fit for your organization, enhancing team performance and cohesion.</p>
                 </div>
-                <div class="testimonial-item">
-                    <p>"Their expertise is a game-changer for healthcare staffing!"</p>
-                    <h4>Dr. Lisa Adams</h4>
-                    <span>Chief Surgeon, LifeLine Hospitals</span>
+                <div class="solution-item">
+                    <div class="solution-icon">📊</div>
+                    <h3>Wide Industry Skill Database for Perfect Match</h3>
+                    <p>Access our extensive database to find candidates with the precise skills and experience needed for your industry.</p>
+                </div>
+                <div class="solution-item">
+                    <div class="solution-icon">🚀</div>
+                    <h3>Head Hunting with Expert Connection</h3>
+                    <p>Our headhunting services leverage industry connections to find top-tier talent that aligns with your strategic goals.</p>
                 </div>
             </div>
         </div>
-       
-    </div>
-</section> -->
+    </section>
 
-    
-  
-    
-   
-
-  <!-- Footer with Contact Form -->
-<footer id="contact" class="footer" data-aos="fade-up">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-about">
-                <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" alt="HospitalPlacement Logo" class="logo">
-                <p>At HospitalPlacement.com, we are committed to bridging the gap between exceptional healthcare talent and leading medical facilities. Since 2010, we’ve been a trusted partner , healthcare industry, delivering innovative staffing solutions that empower hospitals, clinics, and nursing homes to thrive. Whether you’re a healthcare employer seeking top-tier professionals or a jobseeker aiming to advance your career, we connect the right people with the right opportunities every time.</p>
+    <!-- Footer with Contact Form -->
+    <footer id="contact" class="footer" data-aos="fade-up">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" alt="HospitalPlacement Logo" class="logo">
+                    <p>At HospitalPlacement.com, we are committed to bridging the gap between exceptional healthcare talent and leading medical facilities. Since 2010, we’ve been a trusted partner in the healthcare industry, delivering innovative staffing solutions that empower hospitals, clinics, and nursing homes to thrive. Whether you’re a healthcare employer seeking top-tier professionals or a jobseeker aiming to advance your career, we connect the right people with the right opportunities every time.</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Get in Touch</h3>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" required class="form-textarea"></textarea>
+                        </div>
+                        <button type="submit" class="form-btn">
+                            Send Message
+                            <span class="loader-dots"></span>
+                        </button>
+                    </form>
+                </div>
             </div>
-            <div class="footer-contact">
-                <h3>Get in Touch</h3>
-                <form id="contact-form" class="contact-form">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required class="form-input">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required class="form-input">
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" required class="form-textarea"></textarea>
-                    </div>
-                    <button type="submit" class="form-btn">
-                        Send Message
-                        <span class="loader-dots"></span> <!-- Empty span, dots via CSS -->
-                    </button>
-                </form>
-            </div>
+            <p class="footer-bottom">
+                © 2025 HospitalPlacement.com | <a href="mailto:info@hospitalplacement.com">info@hospitalplacement.com</a>
+            </p>
         </div>
-        <p class="footer-bottom">© 2025 HospitalPlacement.com | <a href="mailto:info@hospitalplacement.com">info@hospitalplacement.com</a></p>
-    </div>
-</footer>
+    </footer>
+
+    <!-- Fixed WhatsApp Icon -->
+    <a href="https://wa.me/15557368106?text=Hi%20HospitalPlacement%20Team!%20I’d%20love%20to%20chat%20about%20healthcare%20staffing%20solutions." target="_blank" class="whatsapp-float" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
     <script src="js/forms.js"></script>
