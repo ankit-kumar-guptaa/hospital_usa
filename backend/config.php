@@ -1,15 +1,15 @@
 <?php
 // Database Configuration
-$host = 'localhost';
-$dbname = 'hospital_placement';
-$username = 'root'; // Replace with your DB username
-$password = ''; // Replace with your DB password
+// $host = 'localhost';
+// $dbname = 'hospital_placement';
+// $username = 'root'; // Replace with your DB username
+// $password = ''; // Replace with your DB password
 
 
-// $host = 'localhost:3306';
-// $dbname = 'recru2l1_us_hospital';
-// $username = 'recru2l1_root'; // Replace with your DB username
-// $password = 'ankit1925'; // Replace with your DB password
+$host = 'localhost:3306';
+$dbname = 'recru2l1_us_hospital';
+$username = 'recru2l1_root'; // Replace with your DB username
+$password = 'ankit1925'; // Replace with your DB password
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
